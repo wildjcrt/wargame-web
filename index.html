@@ -24,16 +24,13 @@
     .card.back {
 
     }
-    body {
-      background-image: url('./images/map.jpg');
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
   </style>
-  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 </head>
 <body>
+  <div>
+    <img src="./images/map.jpg">
+  </div>
+
   <div id="counter01" class="counter front"></div>
   <div id="counter02" class="counter front"></div>
   <div id="counter03" class="counter front"></div>
@@ -83,5 +80,20 @@
   <div id="card19" class="card back"></div>
   <div id="card20" class="card back"></div>
 
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.counter')
+        .draggable({delay: 200})
+        .on('dblclick', function() {
+          if ($(this).attr('class').indexOf('front') > 0) {
+            $(this).removeClass('front').addClass('back');
+          } else {
+            $(this).removeClass('back').addClass('front');
+          }
+        });
+    });
+  </script>
 </body>
 </html>
