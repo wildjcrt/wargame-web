@@ -6,6 +6,7 @@
     .counter {
       width: 118px;
       height: 118px;
+      background-repeat: no-repeat;
     }
     .counter.front {
       background-image: url('./images/counterfront.jpg');
@@ -15,14 +16,12 @@
     }
     .card {
       background-image: url('./images/Cards.jpg');
+      background-repeat: no-repeat;
       width: 242px;
       height: 372px;
     }
-    .card.front {
-
-    }
     .card.back {
-
+      background-position: -1452px -744px;
     }
   </style>
 </head>
@@ -93,6 +92,8 @@
             $(this).removeClass('back').addClass('front');
           }
         });
+
+      $('.card').draggable({delay: 200});
     });
   </script>
 </body>
