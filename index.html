@@ -3,6 +3,24 @@
 <head>
   <title>Wargame</title>
   <style type="text/css" media="screen">
+    .dice {
+      width: 116px;
+      height: 117px;
+      margin: 10px 0;
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-image: url('./images/D6.jpg');
+    }
+    .dice.changing {
+      background-color: yellow;
+    }
+    #D1 { background-position: 0px 0px; }
+    #D2 { background-position: -115px 0px; }
+    #D3 { background-position: -230px 0px; }
+    #D4 { background-position: -345px 0px; }
+    #D5 { background-position: -462px 0px; }
+    #D6 { background-position: -577px 0px; }
+
     .counter {
       width: 118px;
       height: 118px;
@@ -116,6 +134,8 @@
     <div class="clearfix"></div>
   </div>
 
+  <div id="D1" class="dice"></div>
+
   <div>
     <img src="./images/map.jpg">
   </div>
@@ -156,6 +176,11 @@
         });
 
       $('.card').draggable({delay: 200});
+      $('.dice').on('click', function() {
+        $(this).effect('highlight', {color: 'cyan'}, 'fast');
+        var number = Math.floor(Math.random() * 6) + 1;
+        $(this).attr('id', 'D'+number);
+      });
     });
   </script>
 </body>
