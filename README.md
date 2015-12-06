@@ -1,3 +1,5 @@
 # wargame-web
 
-It's an Sinatra app. Try to run with small wargames for me testing easily.
+It's a SPA. Try to play small wargames for me testing easily.
+
+No images. No Rules.
