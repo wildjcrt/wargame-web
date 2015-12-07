@@ -2,104 +2,7 @@
 <html>
 <head>
   <title>Wargame</title>
-  <style type="text/css" media="screen">
-    .dice {
-      width: 116px;
-      height: 117px;
-      margin: 10px 0;
-      display: inline-block;
-      background-repeat: no-repeat;
-      background-image: url('./images/D6.jpg');
-    }
-    .dice.changing {
-      background-color: yellow;
-    }
-    #D1 { background-position: 0px 0px; }
-    #D2 { background-position: -115px 0px; }
-    #D3 { background-position: -230px 0px; }
-    #D4 { background-position: -345px 0px; }
-    #D5 { background-position: -462px 0px; }
-    #D6 { background-position: -577px 0px; }
-
-    .counter {
-      width: 118px;
-      height: 118px;
-      background-repeat: no-repeat;
-      float: left;
-    }
-    .counter.front {
-      background-image: url('./images/counterfront.jpg');
-    }
-    .counter.back {
-      background-image: url('./images/counterback.jpg');
-    }
-    #counter01 { background-position: 0px 0px; }
-    #counter02 { background-position: -118px 0px; }
-    #counter03 { background-position: -236px 0px; }
-    #counter04 { background-position: -354px 0px; }
-    #counter05 { background-position: -472px 0px; }
-    #counter06 { background-position: -590px 0px; }
-    #counter07 { background-position: -708px 0px; }
-    #counter08 { background-position: 0px -118px; }
-    #counter09 { background-position: -118px -118px; }
-    #counter10 { background-position: -236px -118px; }
-    #counter11 { background-position: -354px -118px; }
-    #counter12 { background-position: -472px -118px; }
-    #counter13 { background-position: -590px -118px; }
-    #counter14 { background-position: -708px -118px; }
-    #counter15 { background-position: 0px -236px; }
-    #counter16 { background-position: -118px -236px; }
-    #counter17 { background-position: -236px -236px; }
-    #counter18 { background-position: -354px -236px; }
-    #counter19 { background-position: -472px -236px; }
-    #counter20 { background-position: -590px -236px; }
-    #counter21 { background-position: -708px -236px; }
-    #counter22 { background-position: 0px -354px; }
-    #counter23 { background-position: -118px -354px; }
-    #counter24 { background-position: -236px -354px; }
-    #counter25 { background-position: -354px -354px; }
-    #counter26 { background-position: -472px -354px; }
-    #counter27 { background-position: -590px -354px; }
-    #counter28 { background-position: -708px -354px; }
-
-    .clearfix { clear: both;}
-
-    .card {
-      background-image: url('./images/Cards.jpg');
-      background-repeat: no-repeat;
-      width: 242px;
-      height: 372px;
-      position: absolute;
-      top: 1915px;
-    }
-    .card.back {
-      background-position: -1452px -744px !important;
-      left: 1886px;
-    }
-    .card.front {
-      left: 2190px;
-    }
-    #card01 { background-position: 0px 0px; }
-    #card02 { background-position: -242px 0px; }
-    #card03 { background-position: -484px 0px; }
-    #card04 { background-position: -726px 0px; }
-    #card05 { background-position: -968px 0px; }
-    #card06 { background-position: -1210px 0px; }
-    #card07 { background-position: -1452px 0px; }
-    #card08 { background-position: 0px -372px; }
-    #card09 { background-position: -242px -372px; }
-    #card10 { background-position: -484px -372px; }
-    #card11 { background-position: -726px -372px; }
-    #card12 { background-position: -968px -372px; }
-    #card13 { background-position: -1210px -372px; }
-    #card14 { background-position: -1452px -372px; }
-    #card15 { background-position: 0px -744px; }
-    #card16 { background-position: -242px -744px; }
-    #card17 { background-position: -484px -744px; }
-    #card18 { background-position: -726px -744px; }
-    #card19 { background-position: -968px -744px; }
-    #card20 { background-position: -1210px -744px; }
-  </style>
+  <link rel="stylesheet" href="./css/core.css">
 </head>
 <body>
   <div style="width:827px;">
@@ -161,27 +64,9 @@
   <div id="card19" class="card back"></div>
   <div id="card20" class="card back"></div>
 
-  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('.counter')
-        .draggable({delay: 200})
-        .on('dblclick', function() {
-          if ($(this).attr('class').indexOf('front') > 0) {
-            $(this).removeClass('front').addClass('back');
-          } else {
-            $(this).removeClass('back').addClass('front');
-          }
-        });
-
-      $('.card').draggable({delay: 200});
-      $('.dice').on('click', function() {
-        $(this).effect('highlight', {color: 'cyan'}, 'fast');
-        var number = Math.floor(Math.random() * 6) + 1;
-        $(this).attr('id', 'D'+number);
-      });
-    });
-  </script>
+  <script src="./js/jquery-2.1.4.min.js"></script>
+  <script src="./js/jquery-ui-1.11.4.min.js"></script>
+  <script src="./js/config.js"></script>
+  <script src="./js/core.js"></script>
 </body>
 </html>
