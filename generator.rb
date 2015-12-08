@@ -27,7 +27,8 @@ def counters_generator
 
   (0..row).each do |j|
     (0..col).each do |i|
-      x = s * i
+      # x = s * i # Uncomment if counter-back image is the same order as front.
+      x = s * (col-i) # Uncomment if counter-back image uses printable layout.
       y = s * j
       puts "#counter#{counter.succ!} {#{style(x,y)}}"
     end
