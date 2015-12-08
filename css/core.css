@@ -28,35 +28,62 @@
 .counter.back {
   background-image: url('../images/counterback.jpg');
 }
-#counter01 { background-position: 0px 0px; }
-#counter02 { background-position: -118px 0px; }
-#counter03 { background-position: -236px 0px; }
-#counter04 { background-position: -354px 0px; }
-#counter05 { background-position: -472px 0px; }
-#counter06 { background-position: -590px 0px; }
-#counter07 { background-position: -708px 0px; }
-#counter08 { background-position: 0px -118px; }
-#counter09 { background-position: -118px -118px; }
-#counter10 { background-position: -236px -118px; }
-#counter11 { background-position: -354px -118px; }
-#counter12 { background-position: -472px -118px; }
-#counter13 { background-position: -590px -118px; }
-#counter14 { background-position: -708px -118px; }
-#counter15 { background-position: 0px -236px; }
-#counter16 { background-position: -118px -236px; }
-#counter17 { background-position: -236px -236px; }
-#counter18 { background-position: -354px -236px; }
-#counter19 { background-position: -472px -236px; }
-#counter20 { background-position: -590px -236px; }
-#counter21 { background-position: -708px -236px; }
-#counter22 { background-position: 0px -354px; }
-#counter23 { background-position: -118px -354px; }
-#counter24 { background-position: -236px -354px; }
-#counter25 { background-position: -354px -354px; }
-#counter26 { background-position: -472px -354px; }
-#counter27 { background-position: -590px -354px; }
-#counter28 { background-position: -708px -354px; }
-
+#counter01.front { background-position: 0px 0px; }
+#counter02.front { background-position: -118px 0px; }
+#counter03.front { background-position: -236px 0px; }
+#counter04.front { background-position: -354px 0px; }
+#counter05.front { background-position: -472px 0px; }
+#counter06.front { background-position: -590px 0px; }
+#counter07.front { background-position: -708px 0px; }
+#counter08.front { background-position: 0px -118px; }
+#counter09.front { background-position: -118px -118px; }
+#counter10.front { background-position: -236px -118px; }
+#counter11.front { background-position: -354px -118px; }
+#counter12.front { background-position: -472px -118px; }
+#counter13.front { background-position: -590px -118px; }
+#counter14.front { background-position: -708px -118px; }
+#counter15.front { background-position: 0px -236px; }
+#counter16.front { background-position: -118px -236px; }
+#counter17.front { background-position: -236px -236px; }
+#counter18.front { background-position: -354px -236px; }
+#counter19.front { background-position: -472px -236px; }
+#counter20.front { background-position: -590px -236px; }
+#counter21.front { background-position: -708px -236px; }
+#counter22.front { background-position: 0px -354px; }
+#counter23.front { background-position: -118px -354px; }
+#counter24.front { background-position: -236px -354px; }
+#counter25.front { background-position: -354px -354px; }
+#counter26.front { background-position: -472px -354px; }
+#counter27.front { background-position: -590px -354px; }
+#counter28.front { background-position: -708px -354px; }
+#counter01.back  {background-position: -708px 0px;}
+#counter02.back  {background-position: -590px 0px;}
+#counter03.back  {background-position: -472px 0px;}
+#counter04.back  {background-position: -354px 0px;}
+#counter05.back  {background-position: -236px 0px;}
+#counter06.back  {background-position: -118px 0px;}
+#counter07.back  {background-position: 0px 0px;}
+#counter08.back  {background-position: -708px -118px;}
+#counter09.back  {background-position: -590px -118px;}
+#counter10.back  {background-position: -472px -118px;}
+#counter11.back  {background-position: -354px -118px;}
+#counter12.back  {background-position: -236px -118px;}
+#counter13.back  {background-position: -118px -118px;}
+#counter14.back  {background-position: 0px -118px;}
+#counter15.back  {background-position: -708px -236px;}
+#counter16.back  {background-position: -590px -236px;}
+#counter17.back  {background-position: -472px -236px;}
+#counter18.back  {background-position: -354px -236px;}
+#counter19.back  {background-position: -236px -236px;}
+#counter20.back  {background-position: -118px -236px;}
+#counter21.back  {background-position: 0px -236px;}
+#counter22.back  {background-position: -708px -354px;}
+#counter23.back  {background-position: -590px -354px;}
+#counter24.back  {background-position: -472px -354px;}
+#counter25.back  {background-position: -354px -354px;}
+#counter26.back  {background-position: -236px -354px;}
+#counter27.back  {background-position: -118px -354px;}
+#counter28.back  {background-position: 0px -354px;}
 .clearfix { clear: both;}
 
 .card {
