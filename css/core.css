@@ -119,6 +119,11 @@
 .card.front {
   left: 2190px;
 }
+.card.hand {
+  position: static;
+  float: left;
+  top: 0;
+}
 #card01 { background-position: 0px 0px; }
 #card02 { background-position: -242px 0px; }
 #card03 { background-position: -484px 0px; }
