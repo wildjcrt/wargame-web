@@ -1,6 +1,13 @@
 .reserved {
   width: 1024px;
 }
+.reserved:after {
+  content: ' ';
+  display: block;
+  clear: both;
+}
+.clearfix { clear: both; }
+
 .dice {
   width: 116px;
   height: 117px;
@@ -93,7 +100,6 @@
 #counter26.back  {background-position: -236px -354px;}
 #counter27.back  {background-position: -118px -354px;}
 #counter28.back  {background-position: 0px -354px;}
-.clearfix { clear: both;}
 
 .card {
   background-image: url('../images/Cards.jpg');
