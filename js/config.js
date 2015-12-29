@@ -12,6 +12,28 @@ var urlParams;
     urlParams[decode(match[1])] = decode(match[2]);
 })();
 
+// Shuffle function
+(function() {
+  $.fn.shuffle = function() {
+    var allElems = this.get(),
+      getRandom = function(max) {
+        return Math.floor(Math.random() * max);
+      },
+      shuffled = $.map(allElems, function(){
+        var random = getRandom(allElems.length),
+            randEl = $(allElems[random]).clone(true)[0];
+        allElems.splice(random, 1);
+        return randEl;
+     });
+
+    this.each(function(i){
+      $(this).replaceWith($(shuffled[i]));
+    });
+
+    return $(shuffled);
+  };
+})();
+
 // Move counters according to query string
 var counters = {};
 if (urlParams.counter !== undefined) {
