@@ -17,8 +17,19 @@ var counters = {};
 if (urlParams.counter !== undefined) {
   counter_array = urlParams.counter.split(',');
   for (var i = 0; i < counter_array.length; i++) {
-    item_array = counter_array[i].split(':'); // triple items: serial, left, top
+    // item_array format:
+    // 0: serial
+    // 1: left
+    // 2: top
+    // 3: front/back
+    item_array = counter_array[i].split(':');
     $('#counter' + item_array[0]).css({left: item_array[1] + 'px', top: item_array[2] + 'px'});
-    counters[item_array[0]] = item_array[1] + ':' + item_array[2];
+    if (item_array[3] === 'f') {
+      $('#counter' + item_array[0]).removeClass('back').addClass('front');
+    }
+    if (item_array[3] === 'b') {
+      $('#counter' + item_array[0]).removeClass('front').addClass('back');
+    }
+    counters[item_array[0]] = item_array[1] + ':' + item_array[2] + ':' + item_array[3];
   }
 }
