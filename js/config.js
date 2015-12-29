@@ -1,4 +1,5 @@
-// ref: http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript/2880929#2880929
+// Get urlParams
+// source: http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript/2880929#2880929
 var urlParams;
 (window.onpopstate = function () {
   var match,
@@ -13,6 +14,7 @@ var urlParams;
 })();
 
 // Move counters according to query string
+// Get counters
 var counters = {};
 if (urlParams.counter !== undefined) {
   counterArray = urlParams.counter.split(',');
@@ -23,13 +25,15 @@ if (urlParams.counter !== undefined) {
     // 2: top
     // 3: front/back
     itemArray = counterArray[i].split(':');
+
     $('#counter' + itemArray[0]).css({left: itemArray[1] + 'px', top: itemArray[2] + 'px'});
-    if (itemArray[3] === 'f') {
+
+    if (itemArray[3] === 'f')
       $('#counter' + itemArray[0]).removeClass('back').addClass('front');
-    }
-    if (itemArray[3] === 'b') {
+
+    if (itemArray[3] === 'b')
       $('#counter' + itemArray[0]).removeClass('front').addClass('back');
-    }
+
     counters[itemArray[0]] = itemArray[1] + ':' + itemArray[2] + ':' + itemArray[3];
   }
 }
