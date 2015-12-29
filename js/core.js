@@ -9,13 +9,16 @@ $(document).ready(function() {
       }
     });
 
+  var eventCardCounter = 1;
   $('.card')
     .draggable({delay: 200})
     .on('dblclick', function() {
       if ($(this).attr('class').indexOf('front') > 0) {
-        $(this).removeClass('front').addClass('back');
+        $(this).removeClass('front').addClass('back')
+        eventCardCounter -= 1;
       } else {
-        $(this).removeClass('back').addClass('front');
+        $(this).removeClass('back').addClass('front').css('z-index', eventCardCounter);
+        eventCardCounter += 1;
       }
     });
 
